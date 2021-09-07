@@ -10,7 +10,7 @@ primitive, geometrize and gmic for applying different filters to our image seque
 
 a terminal with access to bash or zsh, if you are on windows this does not come by default but it's very easy to install and use, there are many projects dedicated to bringing bash and other posix tool to linux. among them i recommend: cygwin, git bash for windows, msys2 or wsl/2 if you are a little more advanced
 
-## 1rd step, download a video
+## first step, download a video
 ```
 youtube-dl -f 22 https://www.youtube.com/watch?v=q8Ci8tNAXCI
 ```
@@ -18,7 +18,7 @@ youtube-dl automatically downloads the best quality available but we decided to 
 
 once downloaded, we rename the video to ```animals.mp4``` to make our life easier in the next steps
 
-## 2rd step, cut up the video
+## second step, cut up the video
 now that we have the video downloaded it needs to but trimmed sinced it's too long for our purposses, take a look at it in your video player and decide on a a few seconds to make image suquence out of. i've decided to cut the section where the zebras are for example which starts at 47 seconds and ends at 55 seconds
 ```
 ffmpeg -i animals.mp4 -ss 47 -to 55 -c copy zebra.mp4
@@ -27,7 +27,7 @@ i have intentially decided to start the clip a little sooner and end it a little
 
 now for explanation of these switches on ffmpeg do: ```-i``` imports the video, ```-ss``` specifies the starting point of trimming,  ```-to``` the end point of trimming,  ```-c copy``` copies the video and audio quality without conversion.
 
-## 3rd step, make and image sequence out of our clip
+## third step, make and image sequence out of our clip
 ```
 ffmpeg -y -i zebra.mp4 -c:v mjpeg -q:v 2 -pix_fmt yuvj444p -sn -an -threads 0 image-%06d.jpg
 ```
@@ -37,7 +37,7 @@ now that you have the image sequence, remove the extra frames from the begining 
 
 <img src="https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_01.jpg" width=45% height=45%>  <img src="https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_02.jpg" width=45% height=45%>
 
-## 4rd step, the fun part!
+## forth step, the fun part!
 now let's make something beautiful or ugly, your choice, i'll start with an example of using primitive
 ```
 for i in *.jpg; do echo $i; primitive -i $i -o p-$i -n "500" -m "0"; done
@@ -54,3 +54,13 @@ once you found a good filter you like, click on the button on the top right of t
 for i in *.jpg; do echo $i; gmic $i fx_color_abstraction 1,10,0.2,0,50,50 -o g-$i ; done
 ```
 ![step4_gmic](https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_4_gmic.jpg)
+
+## final step, muxing the image sequence back together and make a video or gif file
+move your converted images to another folder so this loop does not mux them with the originals and lets make a gif out of them:
+```
+cat *.jpg | ffmpeg -framerate "30" -f image2pipe -i - zebra2.gif
+```
+or a lossless mp4 video:
+```
+cat *.jpg | ffmpeg -framerate 30 -f image2pipe -i - -codec copy zebra2.mp4
+```
