@@ -36,3 +36,11 @@ now for explanation of these switches on ffmpeg do: ```-c:v mjpeg``` set to use 
 now that you have the image sequence, remove the extra frames from the begining and the end of our sequence
 
 <img src="https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_01.jpg" width=45% height=45%>  <img src="https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_02.jpg" width=45% height=45%>
+
+## 4rd step, the fun part!
+now let's make something beautiful or ugly, your choice, i'll start with an example of using primitive
+```
+for i in *.jpg; do echo $i; primitive -i $i -o p-$i -n "500" -m "0"; done
+```
+this converts your image sequnce using the combo option (all available shapes) and adds 500 shapes to every image.
+![step4_primitive](https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_4_primitive.jpg)
