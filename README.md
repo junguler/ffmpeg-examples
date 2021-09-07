@@ -60,7 +60,7 @@ more options can be found on the projects web pages [primitive](https://github.c
 ## final step, muxing the image sequence back together and make a video or gif file
 move your converted images to another folder so this loop does not mux them with the originals and lets make a gif out of them:
 ```
-cat *.jpg | ffmpeg -framerate "30" -f image2pipe -i - zebra2.gif
+cat *.jpg | ffmpeg -framerate 30 -f image2pipe -i - zebra2.gif
 ```
 or a lossless mp4 video:
 ```
