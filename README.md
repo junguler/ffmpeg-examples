@@ -56,7 +56,7 @@ for i in *.jpg; do echo $i; gmic $i fx_color_abstraction 1,10,0.2,0,50,50 -o g-$
 ```
 ![step4_gmic](https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_4_gmic.jpg)
 
-more options can be found on the projects web pages [primitive](https://github.com/fogleman/primitive) [geometrize](https://github.com/Tw1ddle/geometrize-lib-example) [gmic](https://gmic.eu/) and i also made some easy bash scripts and batch files for primtiive and geometrize to make your life easier, find them [here](https://github.com/junguler/easy-primitive-batch) and [here](https://github.com/junguler/easy-geometrize-batch)
+more options can be found on the projects web pages [primitive](https://github.com/fogleman/primitive), [geometrize](https://github.com/Tw1ddle/geometrize-lib-example) and [gmic](https://gmic.eu/). i also made some easy bash scripts and batch files for primtiive and geometrize to make your life easier, find them [here for primitive](https://github.com/junguler/easy-primitive-batch) and [here for geometrize](https://github.com/junguler/easy-geometrize-batch)
 
 ## final step, muxing the image sequence back together and make a video or gif file
 move your converted images to another folder so this loop does not mux them with the originals and lets make a gif out of them:
