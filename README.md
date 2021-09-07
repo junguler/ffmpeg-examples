@@ -11,3 +11,18 @@ primitive, geometrize and gmic for applying different filters to our image seque
 a terminal with access to bash or zsh, if you are on windows this does not come by default but it's very easy to install and use, there are many projects dedicated to bringing bash and other posix tool to linux. among them i recommend: cygwin, git bash for windows, msys2 or wsl/2 if you are a little more advanced
 
 ## first step, download a video
+```
+youtube-dl -f 22 https://www.youtube.com/watch?v=q8Ci8tNAXCI
+```
+youtube-dl automatically downloads the best quality available but we decided to use the ```-f 22``` switch which tells ```youtube-dl``` we want the 720p mp4 version of the video. you can see all the available quialities of a video by using the ```-F``` switch
+
+once downloaded, we rename the video to ```animals.mp4``` to make our life easier in the next steps
+
+## second step, cut up the video
+now that we have the video downloaded it needs to but trimmed sinced it's too long for our purposses, take a look at it in your video player and decide on a a few seconds to make image suquence out of. i've decided to cut the section where the zebras are for example which starts at 47 seconds and ends at 55 seconds
+```
+ffmpeg -i animals.mp4 -ss 47 -to 55 -c copy zebra.mp4
+```
+i have intentially decided to start the clip a little sooner and end it a little after because with image sequence we have access to the images themselves and don't need to be exact when trimming.
+
+now for explanation of these switches on ffmpeg do: ```-i``` imports the video, ```-ss``` specifies the starting point of trimming,  ```-to``` the end point of trimming,  ```-c copy``` copies the video and audio quality without conversion.
