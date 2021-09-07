@@ -26,3 +26,14 @@ ffmpeg -i animals.mp4 -ss 47 -to 55 -c copy zebra.mp4
 i have intentially decided to start the clip a little sooner and end it a little after because with image sequence we have access to the images themselves and don't need to be exact when trimming.
 
 now for explanation of these switches on ffmpeg do: ```-i``` imports the video, ```-ss``` specifies the starting point of trimming,  ```-to``` the end point of trimming,  ```-c copy``` copies the video and audio quality without conversion.
+
+## third step, make and image sequence out of our clip
+```
+ffmpeg -y -i zebra.mp4 -c:v mjpeg -q:v 2 -pix_fmt yuvj444p -sn -an -threads 0 image-%06d.jpg
+```
+now for explanation of these switches on ffmpeg do: ```-c:v mjpeg``` set to use the internal jpg folder of ffmepg, ```-pix_fmt yuvj444p``` specify color mode of our images,  ```-threads 0``` use all available threads of our cpu for speeding up the process, ```image-%06d.jpg``` add image- prefix to all of images and start from the 000000 number and count up, if your clip is shorter you can use smaller digits, we do care that much tho as we are going to mux these after applying filters anyway.
+
+no that you have the image sequence, remove the extra frames from the begining and the end of our sequence
+
+![example-01](https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_01.jpg) 
+![example-01](https://github.com/junguler/ffmpeg-examples/blob/main/examples/step_3_02.jpg)
