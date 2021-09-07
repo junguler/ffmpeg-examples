@@ -27,7 +27,7 @@ i have intentially decided to start the clip a little sooner and end it a little
 
 now for explanation of these switches on ffmpeg do: ```-i``` imports the video, ```-ss``` specifies the starting point of trimming,  ```-to``` the end point of trimming,  ```-c copy``` copies the video and audio quality without conversion.
 
-## third step, make and image sequence out of our clip
+## third step, make an image sequence out of our clip
 ```
 ffmpeg -y -i zebra.mp4 -c:v mjpeg -q:v 2 -pix_fmt yuvj444p -sn -an -threads 0 image-%06d.jpg
 ```
