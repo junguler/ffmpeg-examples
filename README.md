@@ -49,6 +49,7 @@ this converts your image sequnce using the combo option (all available shapes) a
 here is another example using gmic-gui to find a good filter and then using that same filter in the terminal for our image sequence:
 
 ![gmig-gui](https://github.com/junguler/ffmpeg-examples/blob/main/examples/gmic.jpg)
+
 once you found a good filter you like, click on the button on the top right of the gmic window (highlighted red in above picture) to copy the command and paste it in this loop:
 ```
 for i in *.jpg; do echo $i; gmic $i fx_color_abstraction 1,10,0.2,0,50,50 -o g-$i ; done
