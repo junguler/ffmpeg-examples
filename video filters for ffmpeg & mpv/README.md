@@ -1,4 +1,4 @@
-## a collection ffmpeg video filters for cool and trippy effects with video examples
+a collection ffmpeg video filters for cool and trippy effects with video examples
 
 ## what you need to get started
 [ffmpeg](https://www.ffmpeg.org/)
