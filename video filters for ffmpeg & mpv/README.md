@@ -8,4 +8,3 @@ a collection ffmpeg video filters for cool and trippy effects with video example
 add ffmpeg to your systems @PATH and open a terminal
 
 we also need a video clip to apply our filters to
-
