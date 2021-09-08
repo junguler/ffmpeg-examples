@@ -67,4 +67,4 @@ or a lossless mp4 video:
 ```
 cat *.jpg | ffmpeg -framerate 30 -f image2pipe -i - -codec copy zebra2.mp4
 ```
-![final](https://github.com/junguler/ffmpeg-examples/blob/main/examples/zebra2.gif)
+https://user-images.githubusercontent.com/59083599/132505918-dc677c43-858f-473e-b7d6-c81962d79204.mp4
