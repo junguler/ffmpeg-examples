@@ -11,7 +11,7 @@ ffmpeg -i based.mp4 -vf "hue=H=0.5*PI*t" rainbow.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132606949-b58d62ab-e249-4e36-b729-6f274c1f1712.mp4
 
-if you to change the speed change ```0.5``` to ```1``` which makes it twice as fast or ```0.25``` to make as half as slow
+if you to change the speed change `0.5` to `1` which makes it twice as fast or `0.25` to make as half as slow
 
 ### apply vhs color effect where colors are slightly misplaced on the video
 ```
@@ -34,7 +34,7 @@ ffmpeg -i based.mp4 -vf "colorhold=color=00FF00:similarity=0.4:blend=0.1" colorh
 ```
 https://user-images.githubusercontent.com/59083599/132608391-a2102a4b-3663-4032-924a-440efa4acf45.mp4
 
-we opted to keep the ```00FF00``` but we could have used ```green``` instead with the same effect, the lesser you set the ```similarity``` the restricter this process becomes, ```blend``` tries to make this effect blend to the other parts of the video and not be too jagged.
+we opted to keep the `00FF00` but we could have used `green` instead with the same effect, the lesser you set the `similarity` the restricter this process becomes, `blend` tries to make this effect blend to the other parts of the video and not be too jagged.
 
 ## effects, glitches, extras
 ### apply dithering effect
@@ -51,7 +51,7 @@ ffmpeg -i based.mp4 -vf "lutyuv=y=bitand'(val,128+64+32)'" posterize.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132610325-011478a1-b5a7-4cb8-bc1c-702450fe6746.mp4
 
-notice the usage of quotes ```'``` and double quotes ```"``` , sometimes we need to use both in tandom to let ffmpeg know what to do
+notice the usage of quotes `'` and double quotes `"` , sometimes we need to use both in tandom to let ffmpeg know what to do
 
 ### apply edge detect effect
 this filter has two main uses, one only shows the outline of objects and makes everything else black the other one does that same thing but keeping colors
