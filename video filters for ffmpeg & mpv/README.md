@@ -76,3 +76,14 @@ ffmpeg -i based.mp4 -vf "lagfun=decay=0.99" lagfun.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132612713-3255610a-8d9b-4804-a6f7-a294568e2245.mp4
 
+### bilateral, a sort of smart motion blur
+```
+ffmpeg -i based.mp4 -vf "bilateral=sigmaS=512,format=yuv420p" bilateral.mp4
+```
+https://user-images.githubusercontent.com/59083599/132612988-3619ddb9-e45c-4b72-a23d-a50b2ef1c7be.mp4
+
+### shuffling frames effect
+```
+ffmpeg -i based.mp4 -vf "shuffleframes='9 8 7 6 5 4 3 2 1 0'" shuffle.mp4
+```
+https://user-images.githubusercontent.com/59083599/132613599-f4f01332-f40f-4765-a227-beb73616f47f.mp4
