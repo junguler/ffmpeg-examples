@@ -21,6 +21,13 @@ https://user-images.githubusercontent.com/59083599/132607659-1a6858bb-23c7-41ad-
 
 just like before, change the values to get a higher or lower effects
 
+### change the location of the colors slightly without moving the image itself
+```
+ffmpeg -i based.mp4 -vf "chromashift=cbh=10:cbv=10:crh=-10:crv=-10" chromashift.mp4
+```
+
+https://user-images.githubusercontent.com/59083599/132608899-9c675cf2-c6e6-4937-9c28-115a7c639588.mp4
+
 ### keep a specific color present and make every other color black & white
 ```
 ffmpeg -i based.mp4 -vf "colorhold=color=00FF00:similarity=0.4:blend=0.1" colorhold.mp4
