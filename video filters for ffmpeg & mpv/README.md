@@ -87,3 +87,31 @@ https://user-images.githubusercontent.com/59083599/132612988-3619ddb9-e45c-4b72-
 ffmpeg -i based.mp4 -vf "shuffleframes='9 8 7 6 5 4 3 2 1 0'" shuffle.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132613599-f4f01332-f40f-4765-a227-beb73616f47f.mp4
+
+### amplify, a sort of glitch effect
+```
+ffmpeg -i based.mp4 -vf "amplify=factor=10:low=5:high=15" amplify.mp4
+```
+https://user-images.githubusercontent.com/59083599/132613923-48e435df-8ed6-4687-9acc-cd48102bf4f1.mp4
+
+### tblend, more glitchiness 
+```
+ffmpeg -i based.mp4 -vf "tblend=all_mode=and" tblend_and.mp4
+```
+https://user-images.githubusercontent.com/59083599/132614621-b9b0605c-b23c-4f1a-aa01-142da87bef92.mp4
+```
+ffmpeg -i based.mp4 -vf "tblend=all_mode=or" tblend_or.mp4
+```
+https://user-images.githubusercontent.com/59083599/132614695-706daddf-c5a8-48e3-a94c-d5bda395e516.mp4
+
+### emboss effect
+```
+ffmpeg -i based.mp4 -vf "tblend=all_mode=grainextract" tblend_emboss.mp4
+```
+https://user-images.githubusercontent.com/59083599/132614919-245d7afd-6526-4c50-8822-595e2ae66bba.mp4
+
+### ghost effect
+```
+ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1',format=yuv420p" tmix_ghost.mp4
+```
+https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
