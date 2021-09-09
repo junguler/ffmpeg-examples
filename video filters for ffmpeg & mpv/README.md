@@ -35,3 +35,13 @@ ffmpeg -i based.mp4 -vf "colorhold=color=00FF00:similarity=0.4:blend=0.1" colorh
 https://user-images.githubusercontent.com/59083599/132608391-a2102a4b-3663-4032-924a-440efa4acf45.mp4
 
 we opted to keep the ```00FF00``` but we could have used ```green``` instead with the same effect, the lesser you set the ```similarity``` the restricter this process becomes, ```blend``` tries to make this effect blend to the other parts of the video and not be too jagged.
+
+## effects, glitches, extras
+### apply dithering effect
+```
+ffmpeg -i based.mp4 -vf "format=monow" dither.mp4
+```
+https://user-images.githubusercontent.com/59083599/132609761-0db179ad-7210-43b9-ab87-bd27c65adc44.mp4
+
+this filter does not accept extra arguments, because of how the video is converted the true effect is only shown at 50% , 100% , 200% zoom and so on.
+
