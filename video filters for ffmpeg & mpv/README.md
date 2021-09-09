@@ -45,3 +45,10 @@ https://user-images.githubusercontent.com/59083599/132609761-0db179ad-7210-43b9-
 
 this filter does not accept extra arguments, because of how the video is converted the true effect is only shown at 50% , 100% , 200% zoom and so on.
 
+### apply posterize effect
+```
+ffmpeg -i based.mp4 -vf "lutyuv=y=bitand'(val,128+64+32)'" posterize.mp4
+```
+https://user-images.githubusercontent.com/59083599/132610325-011478a1-b5a7-4cb8-bc1c-702450fe6746.mp4
+
+notice the usage of quotes ```'``` and double quotes ```"``` , sometimes we need to use both in tandom to let ffmpeg know what to do
