@@ -70,3 +70,9 @@ ffmpeg -i based.mp4 -vf "yaepblur=r=6:s=256" yaepblur.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132612328-4f861d29-b1bb-4a93-a6c1-cb7c2a5a8ecd.mp4
 
+### lagfun! a sort of ghost effect
+```
+ffmpeg -i based.mp4 -vf "lagfun=decay=0.99" lagfun.mp4
+```
+https://user-images.githubusercontent.com/59083599/132612713-3255610a-8d9b-4804-a6f7-a294568e2245.mp4
+
