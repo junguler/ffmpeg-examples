@@ -52,3 +52,15 @@ ffmpeg -i based.mp4 -vf "lutyuv=y=bitand'(val,128+64+32)'" posterize.mp4
 https://user-images.githubusercontent.com/59083599/132610325-011478a1-b5a7-4cb8-bc1c-702450fe6746.mp4
 
 notice the usage of quotes ```'``` and double quotes ```"``` , sometimes we need to use both in tandom to let ffmpeg know what to do
+
+### apply edge detect effect
+this filter has two main uses, one only shows the outline of objects and makes everything else black the other one does that same thing but keeping colors
+```
+ffmpeg -i based.mp4 -vf "edgedetect" edgedetect.mp4
+```
+https://user-images.githubusercontent.com/59083599/132611782-e64eab4c-0140-4df3-95ef-b1151b672e81.mp4
+```
+ffmpeg -i based.mp4 -vf "edgedetect=mode=colormix:high=0" edgecolored.mp4
+```
+https://user-images.githubusercontent.com/59083599/132611924-aa47dc8c-aeb3-48ba-b79c-60c1239eb77e.mp4
+
