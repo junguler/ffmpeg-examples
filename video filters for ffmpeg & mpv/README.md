@@ -115,3 +115,5 @@ https://user-images.githubusercontent.com/59083599/132614919-245d7afd-6526-4c50-
 ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1',format=yuv420p" tmix_ghost.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
+
+## more examples will be added soon, including frei0r filters and how to use these filters in mpv
