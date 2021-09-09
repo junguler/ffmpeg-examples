@@ -1,4 +1,4 @@
-here i try to show some example of cool looking filters ffmepg has and how easy it is to use them on mpv as a toggle,
+here i try to show some examples of cool looking filters ffmepg has and how easy it is to use them on mpv as a toggle,
 make sure ffmpeg is on your $PATH and open the terminal and cd into the clip folder and lets go
 
 ### quick links
