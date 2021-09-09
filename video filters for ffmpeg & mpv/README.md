@@ -64,3 +64,9 @@ ffmpeg -i based.mp4 -vf "edgedetect=mode=colormix:high=0" edgecolored.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132611924-aa47dc8c-aeb3-48ba-b79c-60c1239eb77e.mp4
 
+### apply blur to plains but keep edges
+```
+ffmpeg -i based.mp4 -vf "yaepblur=r=6:s=256" yaepblur.mp4
+```
+https://user-images.githubusercontent.com/59083599/132612328-4f861d29-b1bb-4a93-a6c1-cb7c2a5a8ecd.mp4
+
