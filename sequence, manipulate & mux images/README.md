@@ -1,4 +1,4 @@
-here i show examples of how to download videos, cut them up to managable clips, make and image sequence out of them, apply various filters to them and mux them back again to get a cool looking gif or video.
+here i show examples of how to download videos, cut them up to managable clips, make an image sequence out of them, apply various filters to them and mux them back again to get a cool looking gif or video.
 
 ## what you need to get started
 [youtube-dl](https://youtube-dl.org/) to download royalty free videos from youtube as a source
