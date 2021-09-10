@@ -36,6 +36,7 @@ make sure ffmpeg is on your $PATH and open the terminal and cd into the clip fol
 https://user-images.githubusercontent.com/59083599/132606268-3f6a1048-e780-4c7c-a100-3a2a45dafe66.mp4
 
 ## color manipulation
+## 
 ### apply an always changing hue saturation to your video
 ```
 ffmpeg -i based.mp4 -vf "hue=H=0.5*PI*t" rainbow.mp4
@@ -68,6 +69,7 @@ https://user-images.githubusercontent.com/59083599/132608391-a2102a4b-3663-4032-
 we opted to keep the `00FF00` but we could have used `green` instead with the same effect, the lesser you set the `similarity` the restricter this process becomes, `blend` tries to make this effect blend to the other parts of the video and not be too jagged.
 
 ## effects, glitches, extras
+## 
 ### apply dithering effect
 ```
 ffmpeg -i based.mp4 -vf "format=monow" dither.mp4
@@ -147,6 +149,7 @@ ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1'" tmix_ghost.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
 
+## 
 ### how about chaining filters together
 chaining filters is easy just use `,` between, feel free to use as many quotes `'` as you need and put everything in double quotes `"` at the end
 
@@ -191,9 +194,11 @@ KP0 vf set "" ; show-text "NO Filters"
 ```
 i intentially binded this key to the number zero on the numpad keys as it's gets used often and binding it to two key strokes might get annoying, this keybind can be used as many times as you want and those filters also can be toggled again after clearing filters
 
+## 
 ## nice, is there a script to test out ffmpeg filters on mpv without adding them to my input.conf
 yes, there is an excellent script that does exactly that, download it from here [live-filters](https://github.com/hdb/mpv-live-filters) and put it in your `scripts` folder, if a script didn't work just click the raw key and copy all of the text and paste in into a blank text file and rename it to the name of the script
 
+## 
 ## i'm a heavy mouse user, what about us?
 mpv does not come with a right click menu by default but [uosc](https://github.com/darsain/uosc) is an excellent script that mitigates that and adds a bunch of other cool stuff to the ui too, put it in your scripts folder eithr at `C:\users\USERNAME\AppData\Roaming\mpv\scripts\uosc.lua` on windows or `~/.config/mpv/scripts/uosc.lua` now for making a keybind in the right click menu add this to your `input.conf`
 ```
