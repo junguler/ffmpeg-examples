@@ -143,12 +143,17 @@ https://user-images.githubusercontent.com/59083599/132614919-245d7afd-6526-4c50-
 
 ### ghost effect
 ```
-ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1',format=yuv420p" tmix_ghost.mp4
+ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1'" tmix_ghost.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
 
+### how about chaining filters together
+chaining filters is easy just use `,` between, feel free to use as many quotes `'` as you need and put everything in double quotes `"` at the end
 
-
+```
+ffmpeg -i based.mp4 -vf "rgbashift=rh=-2:bv=+2,hue=H=0.1*PI*t" tmix_ghost.mp4
+```
+##
 ## now for the fun part, using filters at runtime on mpv without needing to convert
 
 since mpv is compiled with `libavfilter` which is the ffmpeg's library for most of it's filters using them is very easy on mpv, on your terminal do this:
@@ -165,7 +170,7 @@ chaining multiple filters together is also easy just use `,` between them
 ```
 ALT+B vf toggle hue=H=0.5*PI*t,rgbashift=rh=-2:bv=+2
 ```
-mpv have been recently soft deprecated this way of chaining filters on their git version, it works for the time being but don't need to worry about when it might gets remove because we can chain these by applying two seperate filters on the same keybind using `;`
+mpv have been recently soft deprecated this way of chaining filters on their git version, it works for the time being but we don't need to worry about when it might gets remove because we can chain these by applying two seperate filters on the same keybind using `;`
 ```
 ALT+B vf toggle hue=H=0.5*PI*t ; vf toggle rgbashift=rh=-2:bv=+2
 ```
@@ -173,3 +178,27 @@ you can also print some informtaion about the filters being applied on mpv's osc
 ```
 ALT+R vf toggle hue=H=0.5*PI*t ; show-text "Rainbow Effect"
 ```
+some filters can be applied multiple times to increase their effects, in these cases we use add instead of toggle
+```
+ALT+N vf add rgbashift=rh=-3:bv=+3
+```
+every time you press `ALT + N` this filter is going to apply and make the effect more potent, be careful and don't overdo it because we are applying everything on the fly so to speak and there is some little impact on cpu usage with every filter you add
+
+## how do remove these filters when watching videos on mpv?
+it's very easy to remove all filters that are currently applied to your video
+```
+KP0 vf set "" ; show-text "NO Filters"
+```
+i intentially binded this key to the number zero on the numpad keys as it's gets used often and binding it to two key strokes might get annoying, this keybind can be used as many times as you want and those filters also can be toggled again after clearing filters
+
+## nice, is there a script to test out ffmpeg filters on mpv without adding them to my input.conf
+yes, there is an excellent script that does exactly that, download it from here [live-filters](https://github.com/hdb/mpv-live-filters) and put it in your `scripts` folder, if a script didn't work just click the raw key and copy all of the text and paste in into a blank text file and rename it to the name of the script
+
+## i'm a heavy mouse user, what about us?
+mpv does not come with a right click menu by default but [uosc](https://github.com/darsain/uosc) is an excellent script that mitigates that and adds a bunch of other cool stuff to the ui too, put it in your scripts folder eithr at `C:\users\USERNAME\AppData\Roaming\mpv\scripts\uosc.lua` on windows or `~/.config/mpv/scripts/uosc.lua` now for making a keybind in the right click menu add this to your `input.conf`
+```
+mbtn_right  script-binding uosc/menu
+#           vf toggle hue=H=0.1*PI*t ; show-text "Frame 2" #! Rainbow Filter
+esc         quit #! Quit 
+```
+this a very bare example of a menu, it can have multiple nested menus inside it, for more examples either look at the [uosc](https://github.com/darsain/uosc) page or look at my own [input.conf](https://github.com/junguler/dotfiles/blob/main/mpv/input.conf) which has many examples of how to use this right click menu
