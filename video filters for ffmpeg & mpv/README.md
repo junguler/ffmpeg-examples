@@ -196,7 +196,7 @@ i intentially binded this key to the number zero on the numpad keys as it's gets
 
 
 ## nice, is there a script to test out ffmpeg filters on mpv without adding them to my input.conf
-yes, there is an excellent script that does exactly that, download it from here [live-filters](https://github.com/hdb/mpv-live-filters) and put it in your `scripts` folder, if a script didn't work just click the raw key and copy all of the text and paste in into a blank text file and rename it to the name of the script
+yes, there is an excellent script that does exactly that, download it from here [live-filters](https://github.com/hdb/mpv-live-filters) and put it in your `scripts` folder, if a script didn't work just click the raw button and copy all of the text and paste in into a blank text file and rename it to the name of the script
 
 
 ## i'm a heavy mouse user, what about us?
@@ -206,4 +206,4 @@ mbtn_right  script-binding uosc/menu
 #           vf toggle hue=H=0.1*PI*t ; show-text "Frame 2" #! Rainbow Filter
 esc         quit #! Quit 
 ```
-this a very bare example of a menu, it can have multiple nested menus inside it, for more examples either look at the [uosc](https://github.com/darsain/uosc) page or look at my own [input.conf](https://github.com/junguler/dotfiles/blob/main/mpv/input.conf) which has many examples of how to use this right click menu
+this is a very bare example of a menu, it can have multiple nested menus inside it, for more examples either look at the [uosc](https://github.com/darsain/uosc) page or look at my own [input.conf](https://github.com/junguler/dotfiles/blob/main/mpv/input.conf) which has many examples of how to use this right click menu
