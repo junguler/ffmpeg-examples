@@ -1,7 +1,9 @@
 here i try to show some examples of cool looking filters ffmepg has and how easy it is to use them on mpv as a toggle,
 make sure ffmpeg is on your $PATH and open the terminal and cd into the clip folder and lets go
 
-### quick links
+- [mpv specifics](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#now-for-the-fun-part-using-filters-at-runtime-on-mpv-without-needing-to-convert)
+
+### ffmpeg quick links
 - [ever changing hue saturation](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#apply-an-always-changing-hue-saturation-to-your-video)
 
 - [fake vhs colors](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#apply-vhs-color-effect-where-colors-are-slightly-misplaced-on-the-video)
@@ -31,6 +33,8 @@ make sure ffmpeg is on your $PATH and open the terminal and cd into the clip fol
 - [movement emboss effect](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#emboss-effect)
 
 - [tmix ghosting effect](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#ghost-effect)
+
+- [chaining filters](https://github.com/junguler/ffmpeg-examples/tree/main/video%20filters%20for%20ffmpeg%20%26%20mpv#how-about-chaining-filters-together)
 
 ## our source clip, i'll try to use the same clip for all the filter examples as to make it easier to compare
 https://user-images.githubusercontent.com/59083599/132606268-3f6a1048-e780-4c7c-a100-3a2a45dafe66.mp4
