@@ -147,4 +147,29 @@ ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1',format=yuv420p" tmix_ghost.m
 ```
 https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
 
-## more examples will be added soon, including frei0r filters and how to use these filters in mpv
+
+
+## now for the fun part, using filters at runtime on mpv without needing to convert
+
+since mpv is compiled with `libavfilter` which is the ffmpeg's library for most of it's filters using them is very easy on mpv, on your terminal do this:
+```
+mpv --vf="hue=H=0.5*PI*t" based.mp4
+```
+it's nice but a little cumbersome to open the terminal each time we want to apply some filters, for this reason we'll add these filters and toggles to our `input.conf` , this file does not come with mpv and needs to be made by you. if you are on windows make it in the folder `mpv.exe` is and if you are *nix systems it should be made on `~/.config/mpv/input.conf` now let's put this filter toggle in there and assign a keybind to it.
+```
+ALT+R vf toggle hue=H=0.5*PI*t 
+```
+now every time you hit `ALT + R` this video filter `vf` get's toggled, once for on and another time for off and etc ...
+
+chaining multiple filters together is also easy just use `,` between them
+```
+ALT+B vf toggle hue=H=0.5*PI*t,rgbashift=rh=-2:bv=+2
+```
+mpv have been recently soft deprecated this way of chaining filters on their git version, it works for the time being but don't need to worry about when it might gets remove because we can chain these by applying two seperate filters on the same keybind using `;`
+```
+ALT+B vf toggle hue=H=0.5*PI*t ; vf toggle rgbashift=rh=-2:bv=+2
+```
+you can also print some informtaion about the filters being applied on mpv's osc (on screen controls), using `show-text` command
+```
+ALT+R vf toggle hue=H=0.5*PI*t ; show-text "Rainbow Effect"
+```
