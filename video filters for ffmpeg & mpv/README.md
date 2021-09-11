@@ -210,4 +210,4 @@ mbtn_right  script-binding uosc/menu
 #           vf toggle hue=H=0.1*PI*t ; show-text "Frame 2" #! Rainbow Filter
 esc         quit #! Quit 
 ```
-this is a very bare example of a menu, it can have multiple nested menus inside it, for more examples either look at the [uosc](https://github.com/darsain/uosc) page or look at my own [input.conf](https://github.com/junguler/dotfiles/blob/main/mpv/input.conf) which has many examples of how to use this right click menu
+this is a very bare example of a menu, it can have multiple nested menus inside it, for more examples either look at the [uosc](https://github.com/darsain/uosc#adding-items-to-menu) page or look at my own [input.conf](https://github.com/junguler/dotfiles/blob/main/mpv/input.conf) which has many examples of how to use this right click menu
