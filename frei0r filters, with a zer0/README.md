@@ -28,7 +28,7 @@ https://user-images.githubusercontent.com/59083599/132966714-5cedd2fa-625d-4ef1-
 
 unlike built-in `ffmpeg` filters `0.99` is not 1 percent less than `1` and if you want to amplify a filter effect we have to make it a smaller percentage like `0.75`but in this case we wanted to make the stroke effect less visible so we went with `0.9999` which is way less than `0.99` in how `frei0r` calculates it
 
-### sobele effect
+### sobel effect
 ```
 ffmpeg -i based2.mp4 -vf "frei0r=sobel" sobel.mp4
 ```
