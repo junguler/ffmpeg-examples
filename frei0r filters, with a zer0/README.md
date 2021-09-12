@@ -26,5 +26,5 @@ ffmpeg -i based2.mp4 -vf "frei0r=cartoon:0.9999" cartoon.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132966714-5cedd2fa-625d-4ef1-a249-c37dbd977595.mp4
 
-unlike built-in `ffmpeg` filters `0.99` is not only percent less than `1` and if you to amplify a filter effect we have to make it a smaller percentage like `0.75`but in this case we wanted to make the stroke effect less visible so we went with `0.9999` which is way less than `0.99` in how `frei0r` calculates it
+unlike built-in `ffmpeg` filters `0.99` is not 1 percent less than `1` and if you want to amplify a filter effect we have to make it a smaller percentage like `0.75`but in this case we wanted to make the stroke effect less visible so we went with `0.9999` which is way less than `0.99` in how `frei0r` calculates it
 
