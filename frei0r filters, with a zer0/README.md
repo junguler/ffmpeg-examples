@@ -39,3 +39,23 @@ https://user-images.githubusercontent.com/59083599/132966919-137912c7-fcde-4c06-
 ffmpeg -i based2.mp4 -vf "frei0r=vertigo" vertigo.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132967043-cd07a872-e58c-403b-a1ac-0763934f7242.mp4
+
+### distorter
+```
+ffmpeg -i based2.mp4 -vf "frei0r=distort0r:0.02" distorter.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967092-c681023f-7e39-4177-a6f3-eb7b7aca5bcb.mp4
+
+if you want less distorting change `0.02` to `0.01` for half the movement
+
+### light graffiti
+```
+ffmpeg -i based2.mp4 -vf "frei0r=lightgraffiti" lightgraffiti.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967124-95c1203c-cb44-4a30-b661-eaca4d74e6ea.mp4
+
+### cluster
+```
+ffmpeg -i based2.mp4 -vf "frei0r=cluster" cluster.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967152-e8cea562-04ce-4094-bf41-f14c42131cb0.mp4
