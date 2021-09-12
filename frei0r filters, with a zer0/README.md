@@ -3,6 +3,29 @@
 you need find a version that is specifically compiled for this or compile ffmpeg/mpv yourself and add this library to them
 which is outsite of my knowledge and scoop of this repo.
 
+### quick links
+- [colortap](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#colortap)
+
+- [emboss](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#emboss)
+
+- [cartoon](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#cartoon)
+
+- [sobel](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#sobel)
+
+- [vertigo](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#vertigo)
+
+- [distorter](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#distorter)
+
+- [light-graffiti](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#light-graffiti)
+
+- [cluster](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#cluster)
+
+- [baltan](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#baltan)
+
+- [ndvi](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#ndvi)
+
+- [glitchor](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0/README.md#glitchor)
+
 ### our source clip, i'll try to use the same clip for all the filter examples as to make it easier to compare
 https://user-images.githubusercontent.com/59083599/132966578-cb14f0de-1e9a-4aff-bdbb-b9fcc10d7ab9.mp4
 
@@ -26,7 +49,7 @@ ffmpeg -i based2.mp4 -vf "frei0r=cartoon:0.9999" cartoon.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132966714-5cedd2fa-625d-4ef1-a249-c37dbd977595.mp4
 
-unlike built-in `ffmpeg` filters `0.99` is not 1 percent less than `1` and if you want to amplify a filter effect we have to make it a smaller percentage like `0.75`but in this case we wanted to make the stroke effect less visible so we went with `0.9999` which is way less than `0.99` in how `frei0r` calculates it
+with some `frei0r` filters like this one `0.99` is not 1 percent less than `1` and if you want to amplify a filter effect we have to make it a smaller percentage like `0.75`but in this case we wanted to make the stroke effect less visible so we went with `0.9999` which is way less than `0.99` in how `frei0r` calculates it
 
 ### sobel
 ```
