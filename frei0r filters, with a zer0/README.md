@@ -59,3 +59,23 @@ https://user-images.githubusercontent.com/59083599/132967124-95c1203c-cb44-4a30-
 ffmpeg -i based2.mp4 -vf "frei0r=cluster" cluster.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132967152-e8cea562-04ce-4094-bf41-f14c42131cb0.mp4
+
+### baltan
+```
+ffmpeg -i based2.mp4 -vf "frei0r=baltan" baltan.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967241-accdc944-47de-4932-9585-435fba76e2e8.mp4
+
+### ndvi
+```
+ffmpeg -i based2.mp4 -vf "frei0r=ndvi" ndvi.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967270-5f3118cd-69de-463f-a30b-1f8da33fc6c1.mp4
+
+### glitchor
+```
+ffmpeg -i based2.mp4 -vf "frei0r=glitch0r:0.2" glitchor.mp4
+```
+https://user-images.githubusercontent.com/59083599/132967301-fd4f3491-9bad-4f7b-9c53-54c10bc71994.mp4
+
+if you want to make glitches twice as more frequent change `:0.2` to `:0.4` likewise if you want to make it happen half as much do `:0.1` or 1 forth the effect `:0.05`
