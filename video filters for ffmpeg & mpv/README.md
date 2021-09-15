@@ -34,6 +34,8 @@ make sure ffmpeg is on your $PATH and open the terminal and cd into the clip fol
 
 - [tmix ghosting effect](https://github.com/junguler/ffmpeg-examples/blob/main/video%20filters%20for%20ffmpeg%20&%20mpv/README.md#ghost-effect)
 
+- [kirsch glitch effect](https://github.com/junguler/ffmpeg-examples/tree/main/video%20filters%20for%20ffmpeg%20%26%20mpv#kirsch-glitch-effect)
+
 - [chaining filters](https://github.com/junguler/ffmpeg-examples/tree/main/video%20filters%20for%20ffmpeg%20%26%20mpv#how-about-chaining-filters-together)
 
 ## our source clip, i'll try to use the same clip for all the filter examples as to make it easier to compare
