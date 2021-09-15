@@ -153,6 +153,11 @@ ffmpeg -i based.mp4 -vf "tmix=frames=16:weights='1'" tmix_ghost.mp4
 ```
 https://user-images.githubusercontent.com/59083599/132615205-9d134396-f77c-4bd5-b9ae-a0c1b0337d5f.mp4
 
+### Kirsch glitch effect
+```
+ffmpeg -i based.mp4 -vf "kirsch=1" kirsch+.mp4
+```
+https://user-images.githubusercontent.com/59083599/133453283-f1157a34-94b4-41ce-aebc-7759034aac82.mp4
 
 ### how about chaining filters together
 chaining filters is easy just use `,` between, feel free to use as many quotes `'` as you need and put everything in double quotes `"` at the end
