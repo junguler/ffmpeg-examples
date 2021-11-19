@@ -4,17 +4,17 @@ you need find a version that is specifically compiled for this or compile ffmpeg
 which is outsite of my knowledge and scoop of this repo.
 
 ### quick links
- * [colortap](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters%2C%20with%20a%20zer0#colortap)
- * [emboss](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#emboss)
- * [cartoon](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0cartoon)
- * [sobel](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#sobel)
- * [vertigo](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#vertigo)
- * [distorter](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#distorter)
- * [light-graffiti](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#light-graffiti)
- * [cluster](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#cluster)
- * [baltan](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#baltan)
- * [ndvi](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#ndvi)
- * [glitchor](https://github.com/junguler/ffmpeg-examples/blob/main/frei0r%20filters,%20with%20a%20zer0#glitchor)
+ * [colortap](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#colortap)
+ * [emboss](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#emboss)
+ * [cartoon](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#cartoon)
+ * [sobel](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#sobel)
+ * [vertigo](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#vertigo)
+ * [distorter](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#distorter)
+ * [light-graffiti](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#light-graffiti)
+ * [cluster](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#cluster)
+ * [baltan](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#baltan)
+ * [ndvi](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#ndvi)
+ * [glitchor](https://github.com/junguler/ffmpeg-examples/tree/main/frei0r%20filters,%20with%20a%20zer0#glitchor)
 
 ### our source clip, i'll try to use the same clip for all the filter examples as to make it easier to compare
 https://user-images.githubusercontent.com/59083599/132966578-cb14f0de-1e9a-4aff-bdbb-b9fcc10d7ab9.mp4
