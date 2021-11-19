@@ -1,19 +1,19 @@
 here i show examples of how to download videos, cut them up to managable clips, make an image sequence out of them, apply various filters to them and mux them back again to get a cool looking gif or video.
 
 ## what you need to get started
-[youtube-dl](https://youtube-dl.org/) to download royalty free videos from youtube as a source
+[yt-dlp](https://github.com/yt-dlp/yt-dlp) which is the more active fork of youtube-dl to download royalty free videos from youtube as a source
 
 [ffmpeg](https://www.ffmpeg.org/) to demux. mux, convert and apply different filters
 
-[primitive](https://github.com/fogleman/primitive), [geometrize](https://github.com/Tw1ddle/geometrize-lib-example) and [gmic](https://gmic.eu/) for applying different filters to our image sequences
+[primitive](https://github.com/fogleman/primitive), [geometrize](https://github.com/Tw1ddle/geometrize-lib-example) and [gmic](https://gmic.eu/) or others for applying different filters to our image sequences
 
 a terminal with access to bash or zsh, if you are on windows this does not come by default but it's very easy to install and use, there are many projects dedicated to bringing bash and other posix tools to windows. among them i recommend: [cygwin](https://www.cygwin.com/), [git for windows](https://gitforwindows.org/), [msys2](https://www.msys2.org/) or wsl/2 if you are a little more advanced
 
 ## first step, download a video
 ```
-youtube-dl -f 22 https://www.youtube.com/watch?v=q8Ci8tNAXCI
+yt-dlp -f 22 https://www.youtube.com/watch?v=q8Ci8tNAXCI
 ```
-youtube-dl automatically downloads the best quality available but we decided to use the `-f 22` switch which tells `youtube-dl` we want the 720p mp4 version of the video. you can see all the available quialities of a video by using the `-F` switch
+yt-dlp automatically downloads the best quality available but we decided to use the `-f 22` switch which tells `yt-dlp` we want the 720p mp4 version of the video. you can see all the available quialities of a video by using the `-F` switch
 
 once downloaded, we rename the video to `animals.mp4` to make our life easier in the next steps
 
